@@ -1,6 +1,2 @@
 Hello World
-<<<<<<< HEAD
-Hello World in java
-=======
 python
->>>>>>> feature/board
