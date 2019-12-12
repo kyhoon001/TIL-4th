@@ -40,18 +40,21 @@ t4ir_6th = {
 출력예시)
 4
 """
+print(len(t4ir_6th['division']))
 
 """
 난이도** 2. python standard library에 'requests'가 있나요?
 출력예시)
 False
 """
+print('requests' in t4ir_6th['language']['python']['python standard library'])
 
 """
 난이도** 3. 1305호의 반장의 이름을 출력하세요.
 출력예시)
 문한나
 """
+print(t4ir_6th['classes']['1305']['class president'])
 
 """
 난이도*** 4. t4ir에서 배우는 언어들을 출력하세요.
@@ -59,6 +62,8 @@ False
 python
 web
 """
+for lang in t4ir_6th['language'].keys():
+    print(lang)
 
 """
 난이도*** 5 t4ir 503호의 강사와 매니저의 이름을 출력하세요.
@@ -66,6 +71,8 @@ web
 change
 신윤미
 """
+for name in t4ir_6th['classes']['503'].values():
+    print(name)
 
 """
 난이도***** 6. framework 들의 이름과 설명을 다음과 같이 출력하세요.
@@ -73,9 +80,15 @@ change
 flask는 micro이다.
 django는 full-functioning이다.
 """
+frameworks = t4ir_6th['language']['python']['frameworks']
+for name in frameworks:
+    print(f'{name}는 {frameworks[name]}이다.')
 
 """
 난이도***** 7. 오늘 당번을 뽑기 위해 groups의 E 그룹에서 한명을 랜덤으로 뽑아주세요.
 출력예시)
 오늘의 당번은 최여진
 """
+import random
+lucky = random.choice(t4ir_6th['classes']['1305']['groups']['E'])
+print(lucky)
